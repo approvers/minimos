@@ -37,8 +37,8 @@ EFI_STATUS EFIAPI efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* Syste
     _SystemTable = SystemTable;
 
     clear();
-    print(L"Hello, world!\r\n");
-    print(L"Press any key to exit..\r\n");
+    print(u"Hello, world!\r\n");
+    print(u"Press any key to exit..\r\n");
 
     status = SystemTable->BootServices->WaitForEvent(
         1,
@@ -48,10 +48,10 @@ EFI_STATUS EFIAPI efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* Syste
 
     if (status != EFI_SUCCESS)
     {
-        print(L"Failed to wait for key\r\n");
+        print(u"Failed to wait for key\r\n");
     }
 
-    print(L"Shutting down\r\n");
+    print(u"Shutting down\r\n");
 
     SystemTable->RuntimeServices->ResetSystem(
         EfiResetShutdown,
