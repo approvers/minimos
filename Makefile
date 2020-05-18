@@ -23,10 +23,8 @@ LDFLAGS += \
 	-fuse-ld=lld
 
 INCLUDES = \
-	-I./lib/std \
-	-I./lib/efi \
-	-I./lib/efi/protocols \
-	-I./src/core
+	-I./lib \
+	-I./src
 
 default: build
 

@@ -3,9 +3,9 @@
 
 #include "common.h"
 
-#include "device_path.h"
-#include "simple_text_input.h"
-#include "simple_text_output.h"
+#include "protocols/device_path.h"
+#include "protocols/simple_text_input.h"
+#include "protocols/simple_text_output.h"
 
 #include "guid.h"
 #include "memory.h"
